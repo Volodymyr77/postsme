@@ -2,21 +2,25 @@ import { AppComponent } from './app/app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostComponent } from './post/post.component';
 import {RouterModule, Routes} from '@angular/router';
-import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import { FullpostComponent } from './fullpost/fullpost.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {FullpostComponent} from './fullpost/fullpost.component';
 
-let FullPostComponent;
+
+
 const routes: Routes = [
   {path:'posts', component : PostComponent},
-  {path:'posts/:id',component:FullPostComponent}
+  {path:'posts/:id', component: FullpostComponent}
 ]
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     PostComponent,
     FullpostComponent
+
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,6 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   providers: [],
-
   bootstrap: [AppComponent]
 })
 export class AppModule { }

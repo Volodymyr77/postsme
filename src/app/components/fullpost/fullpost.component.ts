@@ -17,6 +17,7 @@ export class FullpostComponent implements OnInit {
 
     this.activatedRoute.params.subscribe(value =>
       {
+        console.log(value);
         this.postService.getSinglePost(value.id).subscribe(data => this.singlePost = data);
       }
     );
